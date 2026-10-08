@@ -1,0 +1,79 @@
+*{box-sizing:border-box}
+:root{--bg:#100b12;--bg2:#1a1019;--rose:#d99aaa;--pink:#f0b6c6;--gold:#d7b77a;--cream:#f7eee9;--muted:#b9aab0}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% 0%,#2a1424 0,#100b12 38%,#09070a 100%);color:var(--cream);font-family:"Noto Sans TC",sans-serif;font-weight:300;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0 45%,rgba(255,190,210,.025) 50%,transparent 55%);z-index:1}
+#stars,#hearts{position:fixed;inset:0;pointer-events:none;z-index:0}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.5;animation:twinkle 3s infinite}
+.heart-particle{position:absolute;font-size:14px;color:var(--pink);opacity:0;animation:floatHeart 5s linear forwards}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;position:relative;z-index:2;padding:40px 20px}
+.glow{position:absolute;width:420px;height:420px;background:rgba(205,110,145,.13);filter:blur(90px);border-radius:50%}
+.hero-content{position:relative}
+.eyebrow,.section-no{letter-spacing:.35em;font-size:11px;color:var(--gold);margin:0 0 20px}
+h1,h2,.birthday-date,.final-date{font-family:"Cormorant Garamond",serif;font-weight:500}
+h1{font-size:clamp(58px,11vw,130px);line-height:.9;margin:0 0 28px;letter-spacing:-.03em}
+h1 span{color:var(--pink)}
+.subtitle{font-size:15px;line-height:2;color:var(--muted);margin-bottom:38px}
+.lux-btn,.gift-btn,.secret-btn{font:inherit;color:var(--cream);background:rgba(255,255,255,.035);border:1px solid rgba(215,183,122,.55);padding:14px 28px;border-radius:999px;cursor:pointer;transition:.35s}
+.lux-btn:hover,.gift-btn:hover,.secret-btn:hover{background:rgba(215,183,122,.13);transform:translateY(-2px);box-shadow:0 10px 35px rgba(215,183,122,.12)}
+.scroll-hint{position:absolute;bottom:28px;font-size:9px;letter-spacing:.35em;color:#81747a}
+.scroll-hint span{font-size:16px;margin-left:7px}
+main{position:relative;z-index:2}
+.section{max-width:1100px;margin:0 auto;padding:140px 28px}
+.section h2{font-size:clamp(38px,6vw,70px);margin:0 0 18px;line-height:1.05}
+.section-desc{color:var(--muted);line-height:1.9;max-width:650px}
+.intro{text-align:center}
+.intro h2{font-size:clamp(90px,17vw,190px);color:var(--pink);opacity:.9;margin:0}
+.lead{font-family:"Cormorant Garamond",serif;font-size:25px;color:#ead8dc}
+.counter-card{margin:55px auto 0;max-width:620px;border:1px solid rgba(215,183,122,.25);padding:38px 20px;background:rgba(255,255,255,.018);box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.counter-label{font-size:10px;letter-spacing:.4em;color:var(--gold)}
+.counter-number{font-family:"Cormorant Garamond",serif;font-size:90px;line-height:1;color:var(--pink);margin-top:10px}
+.counter-unit{font-size:11px;letter-spacing:.5em;color:#9c8990}
+.counter-sub{margin-top:15px;font-size:12px;color:var(--muted)}
+.memory-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:50px}
+.memory-card{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);overflow:hidden}
+.memory-card.featured{grid-row:span 2}
+.placeholder{min-height:270px;display:grid;place-items:center;background:linear-gradient(135deg,#271522,#120c13);font-family:"Cormorant Garamond",serif;font-size:45px;color:rgba(240,182,198,.55);position:relative}
+.featured .placeholder{min-height:560px}
+.placeholder small{position:absolute;bottom:18px;left:20px;font:10px "Noto Sans TC";letter-spacing:.3em;color:#786b71}
+.memory-text{padding:22px}
+.memory-text span{font-size:10px;color:var(--gold);letter-spacing:.2em}
+.memory-text h3{font-family:"Cormorant Garamond",serif;font-size:26px;margin:8px 0}
+.memory-text p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}
+.secret{text-align:center}
+.secret-box{padding:75px 20px;border:1px solid rgba(217,154,170,.18);background:radial-gradient(circle at center,rgba(217,154,170,.08),transparent 65%)}
+.secret-box>p{font-family:"Cormorant Garamond",serif;font-size:32px}
+.secret-message{display:none;margin-top:30px}
+.secret-message span{display:block;font-family:"Cormorant Garamond",serif;font-size:32px;color:var(--pink);margin:8px;animation:fadeUp .6s both}
+.secret-message span:nth-child(2){animation-delay:.5s}.secret-message span:nth-child(3){animation-delay:1s}
+.secret-message small{display:block;margin-top:20px;color:var(--muted);animation:fadeUp .6s 1.5s both}
+.birthday{text-align:center;padding-top:100px}
+.birthday-date{font-size:clamp(100px,18vw,190px);line-height:.8;color:var(--gold)}
+.birthday h2{margin-top:40px}
+.cake-wrap{margin-top:60px}
+.cake{height:180px;width:270px;margin:auto;position:relative;cursor:pointer;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.plate{position:absolute;bottom:5px;left:20px;width:230px;height:18px;border-radius:50%;background:#d7b77a33;border:1px solid #d7b77a66}
+.cake-body{position:absolute;bottom:22px;left:48px;width:174px;height:85px;border-radius:12px 12px 22px 22px;background:linear-gradient(#8e465e,#5d263b);border:1px solid #d99aaa55}
+.cake-top{position:absolute;bottom:92px;left:48px;width:174px;height:45px;border-radius:50%;background:#f0b6c6;border:1px solid #f7eee955;z-index:2}
+.cake-top:after{content:"";position:absolute;left:25px;right:25px;top:15px;height:9px;border-radius:50%;background:#fff2f555}
+.candle{position:absolute;bottom:128px;width:10px;height:45px;background:#f7eee9;border-radius:4px;z-index:4}
+.c1{left:83px}.c2{left:130px}.c3{left:177px}
+.flame{position:absolute;bottom:171px;width:13px;height:22px;background:#f6c56e;border-radius:50% 50% 50% 0;transform:rotate(-45deg);z-index:5;animation:flicker .8s infinite alternate}
+.f1{left:82px}.f2{left:129px}.f3{left:176px}
+#cakeHint{font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.letter-paper{max-width:760px;margin:auto;background:linear-gradient(145deg,#f6ece6,#ead8d1);color:#3b2730;padding:65px clamp(28px,7vw,80px);box-shadow:0 30px 100px rgba(0,0,0,.35);position:relative}
+.letter-paper:before,.letter-paper:after{content:"";position:absolute;width:40px;height:40px;border:1px solid #b99b8d55}.letter-paper:before{top:18px;left:18px;border-right:0;border-bottom:0}.letter-paper:after{bottom:18px;right:18px;border-left:0;border-top:0}
+.letter-mark{font-size:25px;color:#a45d73}
+.letter-paper h2{font-size:54px;margin:8px 0 40px}
+.letter-body{font-size:15px;line-height:2.15}.letter-body p{margin:0 0 20px}.letter-body .emphasis{font-family:"Cormorant Garamond",serif;font-size:34px;color:#8c405b}.heart-line{text-align:center;font-size:30px!important;color:#a45d73}
+.finale{text-align:center;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.final-date{font-size:clamp(55px,10vw,110px);color:var(--pink);margin-bottom:30px}.final-date span{font-size:.55em;color:var(--gold);padding:0 12px}
+.finale>p:not(.section-no){font-family:"Cormorant Garamond",serif;font-size:25px;margin:5px;color:#d9c8cd}
+.gift-btn{margin-top:45px}.gift-message{display:none;margin-top:40px}.gift-message span{display:block;font-family:"Cormorant Garamond",serif;font-size:36px;color:var(--pink);margin:5px}.gift-message small{display:block;color:var(--muted);margin-top:18px}
+footer{text-align:center;padding:30px;color:#665960;font-size:9px;letter-spacing:.35em;position:relative;z-index:2}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}.reveal.visible{opacity:1;transform:none}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.8}}
+@keyframes flicker{from{transform:rotate(-45deg) scale(.9);opacity:.8}to{transform:rotate(-45deg) scale(1.1);opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@keyframes floatHeart{0%{transform:translateY(20px) scale(.7);opacity:0}15%{opacity:.65}100%{transform:translateY(-100vh) translateX(50px) rotate(20deg);opacity:0}}
+@media(max-width:700px){.section{padding:100px 20px}.memory-grid{grid-template-columns:1fr}.memory-card.featured{grid-row:auto}.featured .placeholder{min-height:330px}.placeholder{min-height:240px}.letter-paper{padding:45px 28px}.counter-number{font-size:70px}.birthday-date{font-size:100px}}

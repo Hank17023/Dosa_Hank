@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b12">
+  <title>給小梅的生日禮物 ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="hearts"></div>
+
+  <section class="hero" id="home">
+    <div class="glow"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>For <span>小梅</span> ♡</h1>
+      <p class="subtitle">有些故事，不需要很多人知道。<br>只要妳知道，就夠了。</p>
+      <button class="lux-btn" id="enterBtn">點我開始 <span>♡</span></button>
+    </div>
+    <div class="scroll-hint">SCROLL <span>↓</span></div>
+  </section>
+
+  <main id="story">
+    <section class="section intro reveal">
+      <p class="section-no">01 / OUR STORY</p>
+      <h2>01.01</h2>
+      <p class="lead">這一天，我們的故事開始了。</p>
+      <div class="counter-card">
+        <div class="counter-label">TOGETHER FOR</div>
+        <div class="counter-number" id="daysTogether">0</div>
+        <div class="counter-unit">DAYS</div>
+        <div class="counter-sub" id="timeTogether">正在計算我們一起走過的時間...</div>
+      </div>
+    </section>
+
+    <section class="section memories reveal">
+      <p class="section-no">02 / OUR MEMORIES</p>
+      <h2>那些，只有我們知道的日子</h2>
+      <p class="section-desc">照片還沒放進來沒關係。這裡先留給我們。</p>
+      <div class="memory-grid">
+        <article class="memory-card featured">
+          <div class="placeholder">♡<small>PHOTO 01</small></div>
+          <div class="memory-text"><span>01</span><h3>我們的第一個回憶</h3><p>之後把那一天的照片和故事放在這裡。</p></div>
+        </article>
+        <article class="memory-card">
+          <div class="placeholder">♡<small>PHOTO 02</small></div>
+          <div class="memory-text"><span>02</span><h3>那一天的我們</h3><p>一句只有妳看得懂的話。</p></div>
+        </article>
+        <article class="memory-card">
+          <div class="placeholder">♡<small>PHOTO 03</small></div>
+          <div class="memory-text"><span>03</span><h3>還有很多以後</h3><p>未完待續。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section secret reveal">
+      <p class="section-no">03 / A SECRET</p>
+      <div class="secret-box">
+        <p>偷偷告訴妳一件事</p>
+        <button class="secret-btn" id="secretBtn">點一下看看</button>
+        <div class="secret-message" id="secretMessage">
+          <span>我很喜歡妳。</span>
+          <span>真的很喜歡。</span>
+          <span>非常非常喜歡。</span>
+          <small>好啦，我知道這很肉麻 😂</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section birthday reveal" id="birthday">
+      <p class="section-no">04 / 11.19</p>
+      <div class="birthday-date">11.19</div>
+      <h2>Happy Birthday, 小梅</h2>
+      <p class="section-desc">今天的主角，是全世界最值得被好好祝福的人。</p>
+      <div class="cake-wrap">
+        <div class="cake" id="cake" title="點一下吹熄蠟燭">
+          <div class="flame f1"></div><div class="flame f2"></div><div class="flame f3"></div>
+          <div class="candle c1"></div><div class="candle c2"></div><div class="candle c3"></div>
+          <div class="cake-top"></div><div class="cake-body"></div>
+          <div class="plate"></div>
+        </div>
+        <p id="cakeHint">點一下蛋糕 ♡</p>
+      </div>
+    </section>
+
+    <section class="section letter reveal">
+      <p class="section-no">05 / A LETTER</p>
+      <div class="letter-paper">
+        <div class="letter-mark">♡</div>
+        <h2>給小梅</h2>
+        <div class="letter-body">
+          <p>生日快樂。</p>
+          <p>我其實沒有很會說一些很浪漫的話，但有一件事情我一直都很確定。</p>
+          <p>遇見妳之後，我的生活裡多了一個很重要的人。</p>
+          <p>謝謝妳陪著我，謝謝妳願意把自己的時間分給我，也謝謝妳成為我生命裡很特別的存在。</p>
+          <p>希望以後的 11 月 19 日，我都還能在妳身邊跟妳說：</p>
+          <p class="emphasis">生日快樂，小梅。</p>
+          <p class="heart-line">♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section finale reveal">
+      <p class="section-no">06 / TO BE CONTINUED</p>
+      <div class="final-date">01.01 <span>→</span> ∞</div>
+      <p>故事還沒有結束。</p>
+      <p>因為我們還有很多很多以後。</p>
+      <button class="gift-btn" id="giftBtn">🎁 還有一個小秘密</button>
+      <div class="gift-message" id="giftMessage">
+        <span>真正的驚喜，</span>
+        <span>留給妳自己發現。</span>
+        <small>Happy Birthday, my favorite person. ♡</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>MADE WITH LOVE · FOR 小梅 ♡</footer>
+  <script src="script.js"></script>
+</body>
+</html>
